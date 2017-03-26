@@ -1,0 +1,99 @@
+img {
+	max-height: 600px;
+	border: 3px solid red;
+	display: block;
+	margin-bottom: 200px;
+}
+
+#t1 {
+	transform: rotate(-20deg);
+	transition: all .3s;
+}
+
+#t2 {
+	transform: translate(200px, 200px) rotate(30deg) scale(0.5);
+}
+
+#t3 {
+	transform: scaleX(2);
+	transform: scaleY(2);
+	transform: scale(2);
+}
+
+
+#t4 {
+	animation-name: stretch; 
+	animation-duration: 4s;
+	width: 100%;
+}
+
+@keyframes stretch {
+	from{
+		width: 50%;
+	}
+	
+	to{
+		width: 100%;
+	}
+}
+
+t5 {
+	animation-name: second_stretch; 
+	animation-duration: 6s;
+	width: 50%;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+
+@keyframes second_stretch{
+	0%, 100% {
+		width: 50%;
+	}
+	
+	50%{
+		width: 100%
+	}
+	
+}
+
+#k1{
+	width: 400px;
+	height: 400px;
+	border: 3px solid red;
+	position:absolute;
+}
+
+#k2{
+	animation-name: translate1;
+	width: 50px;
+	height: 50px;
+	background-color:  blue;
+	position: absolute;
+	top: 350px;
+	right: 350px;
+	transition: all .3s;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	
+}
+
+@keyframes translate1{
+	
+	0%, 100% {
+		transform: translate(0) 
+	}
+	
+	25%{
+		transform: translate(350px, 0) 
+	}
+	
+	50%{
+		transform: translate(350px, -350px) 
+	}
+	
+	75%{
+		transform: translate(0, -350px) 
+	}
+}
+
